@@ -1,31 +1,29 @@
 defmodule Secrets do
   def secret_add(secret) do
-    fn add -> add + secret end
-     
+    fn num -> num + secret end
   end
 
   def secret_subtract(secret) do
-    fn sub -> sub - secret end
+    fn num -> num - secret end
   end
 
   def secret_multiply(secret) do
-     fn mult -> mult * secret end
+    fn num -> num * secret end
   end
 
   def secret_divide(secret) do
-     fn div -> trunc(div/secret) end
+    fn num -> trunc(num / secret) end
   end
 
   def secret_and(secret) do
-     fn band -> Bitwise.band(band, secret) end
+    fn num -> Bitwise.band(num, secret) end
   end
 
   def secret_xor(secret) do
-     fn bxor -> Bitwise.bxor(bxor, secret) end 
+    fn num -> Bitwise.bxor(num, secret) end
   end
 
   def secret_combine(fun1, fun2) do
-     fn combine ->  fun2.(fun1.(combine))   end
-
-  end  
+    fn num -> fun2.(fun1.(num)) end
+  end
 end
