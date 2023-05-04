@@ -1,6 +1,6 @@
 defmodule KitchenCalculator do
-  def get_volume(volume_pair) do
-    elem(volume_pair, 1)
+  def get_volume({volumn, quantity}) do
+    quantity
   end
 
   def to_milliliter({:milliliter, quantity}) do
