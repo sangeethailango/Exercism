@@ -1,5 +1,5 @@
 defmodule KitchenCalculator do
-  def get_volume({volumn, quantity}) do
+  def get_volume({_volume, quantity}) do
     quantity
   end
 
