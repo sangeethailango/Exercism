@@ -7,11 +7,11 @@ defmodule LanguageList do
     [language | language_list]
   end
 
-  def remove([head | tail]) do
-   tail
+  def remove([_head | tail]) do
+    tail
   end
 
-  def first([head | tail]) do
+  def first([head | _tail]) do
     head
   end
 
