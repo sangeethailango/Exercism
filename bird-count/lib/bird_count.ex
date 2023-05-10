@@ -4,15 +4,15 @@ defmodule BirdCount do
   end
 
   def today([hd | _tl]) do
-    hd 
+    hd
   end
 
   def increment_day_count(list) when list == [] do
     [1]
   end
 
-  def increment_day_count([hd | tl]) do    
-		[1 + hd | tl]
+  def increment_day_count([hd | tl]) do
+    [1 + hd | tl]
   end
 
   def has_day_without_birds?(list) do
@@ -28,7 +28,7 @@ defmodule BirdCount do
   def busy_days([]), do: 0
 
   def busy_days([hd | tl]) when hd >= 5 do
-    1 +  busy_days(tl)
+    1 + busy_days(tl)
   end
 
   def busy_days([hd | tl]) when hd < 5 do
