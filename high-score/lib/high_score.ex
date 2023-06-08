@@ -12,7 +12,7 @@ defmodule HighScore do
     Map.delete(scores, name) 
   end
 
-  def reset_score(scores, name) do
+  def reset_score(_scores, name) do
     %{name => @default_initial_score}
   end
 
@@ -21,6 +21,6 @@ defmodule HighScore do
   end
 
   def get_players(scores) do
-   Map.keys(scores)
+    Map.keys(scores)
   end
 end
